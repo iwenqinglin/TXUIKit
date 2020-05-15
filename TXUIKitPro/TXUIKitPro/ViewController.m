@@ -16,8 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UISearchBar *search;
-    UISearchController;
     // Do any additional setup after loading the view, typically from a nib.
 }
 
