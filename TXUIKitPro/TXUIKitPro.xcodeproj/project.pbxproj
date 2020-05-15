@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29F3C8D888C75442715D1931 /* libPods-TXUIKitPro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 284D9AD381928C6AE8C73020 /* libPods-TXUIKitPro.a */; };
 		40DB60C4246EE9230048A805 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DB60C3246EE9230048A805 /* main.m */; };
 		40DB60C7246EE9230048A805 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DB60C6246EE9230048A805 /* AppDelegate.m */; };
 		40DB60CA246EE9230048A805 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DB60C9246EE9230048A805 /* ViewController.m */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		284D9AD381928C6AE8C73020 /* libPods-TXUIKitPro.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TXUIKitPro.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40DB60BF246EE9230048A805 /* TXUIKitPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TXUIKitPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40DB60C3246EE9230048A805 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		40DB60C5246EE9230048A805 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -31,6 +33,8 @@
 		40DB60E2246EEBBB0048A805 /* TXUIKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TXUIKit.podspec; path = ../TXUIKit.podspec; sourceTree = "<group>"; };
 		40DB60E4246EEC5B0048A805 /* TXSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXSearchBar.h; sourceTree = "<group>"; };
 		40DB60E5246EEC5B0048A805 /* TXSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXSearchBar.m; sourceTree = "<group>"; };
+		693005CA5866DD5EF57CE475 /* Pods-TXUIKitPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TXUIKitPro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TXUIKitPro/Pods-TXUIKitPro.debug.xcconfig"; sourceTree = "<group>"; };
+		E3FC994A411B8AAFDCDF2504 /* Pods-TXUIKitPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TXUIKitPro.release.xcconfig"; path = "Pods/Target Support Files/Pods-TXUIKitPro/Pods-TXUIKitPro.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29F3C8D888C75442715D1931 /* libPods-TXUIKitPro.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,6 +54,8 @@
 			children = (
 				40DB60C1246EE9230048A805 /* TXUIKitPro */,
 				40DB60C0246EE9230048A805 /* Products */,
+				6B0834BAD460615B1BAAF667 /* Pods */,
+				9D406D62BCE5813A4EE4C02D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +119,23 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		6B0834BAD460615B1BAAF667 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				693005CA5866DD5EF57CE475 /* Pods-TXUIKitPro.debug.xcconfig */,
+				E3FC994A411B8AAFDCDF2504 /* Pods-TXUIKitPro.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9D406D62BCE5813A4EE4C02D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				284D9AD381928C6AE8C73020 /* libPods-TXUIKitPro.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,6 +143,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 40DB60D6246EE9230048A805 /* Build configuration list for PBXNativeTarget "TXUIKitPro" */;
 			buildPhases = (
+				773B1E68E6865718C6334CD7 /* [CP] Check Pods Manifest.lock */,
 				40DB60BB246EE9220048A805 /* Sources */,
 				40DB60BC246EE9220048A805 /* Frameworks */,
 				40DB60BD246EE9220048A805 /* Resources */,
@@ -179,6 +204,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		773B1E68E6865718C6334CD7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TXUIKitPro-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		40DB60BB246EE9220048A805 /* Sources */ = {
@@ -304,6 +354,7 @@
 		};
 		40DB60D7246EE9230048A805 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 693005CA5866DD5EF57CE475 /* Pods-TXUIKitPro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 36778GXUGM;
@@ -316,6 +367,7 @@
 		};
 		40DB60D8246EE9230048A805 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3FC994A411B8AAFDCDF2504 /* Pods-TXUIKitPro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 36778GXUGM;
