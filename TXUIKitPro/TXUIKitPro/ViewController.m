@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "TXSearchBar.h"
+#import <Masonry.h>
 
 @interface ViewController ()
+@property (nonatomic, strong) TXSearchBar *searchBar;
 
 @end
 
@@ -16,9 +19,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.searchBar = [[TXSearchBar alloc] initWithFrame:CGRectZero];
+    self.searchBar.backgroundColor = [UIColor grayColor];
+    
+    self.searchBar.placeholder = @"input name";
+    [self.view addSubview:self.searchBar];
+    [self.searchBar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(self.view);
+        make.top.equalTo(self.view).offset(20);
+        make.height.equalTo(@40);
+    }];
+    
+    
+    UISearchBar *search;
+    UISearchController *searchVC;
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (IBAction)close:(id)sender {
+    [self.searchBar resignFirstResponder];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
