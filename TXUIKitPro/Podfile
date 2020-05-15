@@ -2,7 +2,6 @@
 # platform :ios, '9.0'
 
 target 'TXUIKitPro' do
-
-pod 'Masonry'
-
+  pod 'Masonry'
+  
 end
