@@ -13,6 +13,8 @@
 		40DB60CD246EE9230048A805 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40DB60CB246EE9230048A805 /* Main.storyboard */; };
 		40DB60CF246EE9230048A805 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40DB60CE246EE9230048A805 /* Assets.xcassets */; };
 		40DB60D2246EE9230048A805 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40DB60D0246EE9230048A805 /* LaunchScreen.storyboard */; };
+		40DB60E3246EEBBB0048A805 /* TXUIKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 40DB60E2246EEBBB0048A805 /* TXUIKit.podspec */; };
+		40DB60E6246EEC5B0048A805 /* TXSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DB60E5246EEC5B0048A805 /* TXSearchBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		40DB60CE246EE9230048A805 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40DB60D1246EE9230048A805 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40DB60D3246EE9230048A805 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40DB60E2246EEBBB0048A805 /* TXUIKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TXUIKit.podspec; path = ../TXUIKit.podspec; sourceTree = "<group>"; };
+		40DB60E4246EEC5B0048A805 /* TXSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXSearchBar.h; sourceTree = "<group>"; };
+		40DB60E5246EEC5B0048A805 /* TXSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXSearchBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +88,7 @@
 		40DB60D9246EE9650048A805 /* TXUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				40DB60E2246EEBBB0048A805 /* TXUIKit.podspec */,
 				40DB60DA246EE9650048A805 /* Assets */,
 				40DB60DC246EE9650048A805 /* Classes */,
 			);
@@ -100,6 +106,8 @@
 		40DB60DC246EE9650048A805 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				40DB60E4246EEC5B0048A805 /* TXSearchBar.h */,
+				40DB60E5246EEC5B0048A805 /* TXSearchBar.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -164,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40DB60D2246EE9230048A805 /* LaunchScreen.storyboard in Resources */,
+				40DB60E3246EEBBB0048A805 /* TXUIKit.podspec in Resources */,
 				40DB60CF246EE9230048A805 /* Assets.xcassets in Resources */,
 				40DB60CD246EE9230048A805 /* Main.storyboard in Resources */,
 			);
@@ -179,6 +188,7 @@
 				40DB60CA246EE9230048A805 /* ViewController.m in Sources */,
 				40DB60C7246EE9230048A805 /* AppDelegate.m in Sources */,
 				40DB60C4246EE9230048A805 /* main.m in Sources */,
+				40DB60E6246EEC5B0048A805 /* TXSearchBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
