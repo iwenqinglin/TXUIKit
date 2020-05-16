@@ -168,7 +168,7 @@
 				TargetAttributes = {
 					40DB60BE246EE9220048A805 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 36778GXUGM;
+						DevelopmentTeam = RMMH8F2D88;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -178,6 +178,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -357,7 +358,7 @@
 			baseConfigurationReference = 693005CA5866DD5EF57CE475 /* Pods-TXUIKitPro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 36778GXUGM;
+				DEVELOPMENT_TEAM = RMMH8F2D88;
 				INFOPLIST_FILE = TXUIKitPro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TX.TXUIKitPro;
