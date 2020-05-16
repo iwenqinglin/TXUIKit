@@ -12,6 +12,7 @@
 
 @interface ViewController ()
 @property (nonatomic, strong) TXSearchBar *searchBar;
+@property (nonatomic, strong) IBOutlet UILabel *label;
 
 @end
 
@@ -31,9 +32,22 @@
         make.height.equalTo(@40);
     }];
     
+    __weak typeof(self) weakSelf = self;
+    [self.searchBar addEventBlock:^(TXSearchBarState state, NSString *searchText) {
+        NSLog(@"state :%ld   string:%@",state,searchText);
+        if (state == TXSearchBarStateNormal) {
+            weakSelf.label.text = @"历史记录";
+        } else if (state == TXSearchBarStateEditing) {
+            weakSelf.label.text = @"正在搜索页面";
+        } else if (state == TXSearchBarStateEnd) {
+            weakSelf.label.text = @"搜索结果页面";
+        }
+        
+    } clickBlock:^(NSString *searchText) {
+        NSLog(@"搜索%@",searchText);
+        //weakSelf.label.text = @"点击搜索按钮";
+    }];
     
-    UISearchBar *search;
-    UISearchController *searchVC;
     // Do any additional setup after loading the view, typically from a nib.
 }
 

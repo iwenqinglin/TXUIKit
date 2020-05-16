@@ -12,6 +12,7 @@
 @property(nonatomic, strong) UITextField *searchField;
 @property(nonatomic, copy) SearchStateChangeBlock searchStateBlock;
 @property(nonatomic, copy) ClickSearchButtonBlock searchClickBlock;
+@property(nonatomic, copy) NSString *lastText;//最后一次变更的文本
 
 @end
 
@@ -57,41 +58,86 @@
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
     //becomeFirstResponder方法先去调用textFieldShouldBeginEditing，如果为YES则调用此方法.
     //点击输入框的时候（尝试输入的时候）也会调用此方法。
-    NSLog(@"textFieldDidBeginEditing");
+    //NSLog(@"textFieldDidBeginEditing");
     if (self.searchStateBlock) {
-        self.searchStateBlock(TXSearchBarStateNormal,textField.text);
+        if (textField.text.length > 0) {
+            self.searchStateBlock(TXSearchBarStateEditing,textField.text);
+        } else {
+            self.searchStateBlock(TXSearchBarStateNormal,textField.text);
+        }
     }
 }
 
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
-    NSLog(@"textFieldShouldEndEditing");
+    //NSLog(@"textFieldShouldEndEditing");
     return YES;
 }
 
-- (void)textFieldDidEndEditing:(UITextField *)textField {
-    NSLog(@"textFieldDidEndEditing");
-}
+//ios 9
+//- (void)textFieldDidEndEditing:(UITextField *)textField {
+//    //NSLog(@"textFieldDidEndEditing");
+//    if (self.searchStateBlock) {
+//        if (textField.text.length > 0) {
+//            self.searchStateBlock(TXSearchBarStateEditing,textField.text);
+//        } else {
+//            self.searchStateBlock(TXSearchBarStateNormal,textField.text);
+//        }
+//    }
+//}
+////ios 10
+//- (void)textFieldDidEndEditing:(UITextField *)textField reason:(UITextFieldDidEndEditingReason)reason {
+//    //NSLog(@"textFieldDidEndEditing textField reason");
+//    if (self.searchStateBlock) {
+//        if (textField.text.length > 0) {
+//            self.searchStateBlock(TXSearchBarStateEditing,textField.text);
+//        } else {
+//            self.searchStateBlock(TXSearchBarStateNormal,textField.text);
+//        }
+//    }
+//}
 
-- (void)textFieldDidEndEditing:(UITextField *)textField reason:(UITextFieldDidEndEditingReason)reason {
-    NSLog(@"textFieldDidEndEditing textField reason");
-}
-
+//限制字数、限制特定字符的实现
+//string新输入的字符
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    NSLog(@"shouldChangeCharactersInRange");
+    //NSLog(@"shouldChangeCharactersInRange   %@",string);
     return YES;
 }
 
 - (BOOL)textFieldShouldClear:(UITextField *)textField {
-    NSLog(@"textFieldShouldClear");
+    //NSLog(@"textFieldShouldClear");
+    if (self.searchStateBlock) {
+        self.searchStateBlock(TXSearchBarStateNormal,textField.text);
+    }
     return YES;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    NSLog(@"textFieldShouldReturn");
+    //NSLog(@"textFieldShouldReturn");
+    if (textField.text.length > 0) {
+        self.searchStateBlock(TXSearchBarStateEnd,textField.text);
+    } else {
+        self.searchStateBlock(TXSearchBarStateNormal,textField.text);
+    }
+    if (self.searchClickBlock) {
+        self.searchClickBlock(textField.text);
+    }
+    [self.searchField resignFirstResponder];
     return YES;
 }
 
-
+#pragma mark - Target
+-(void)textFieldDidChange:(UITextField *)textField {
+    if (![self.lastText isEqualToString:textField.text]) {
+        if (self.searchStateBlock) {
+            if (textField.text.length > 0) {
+                self.searchStateBlock(TXSearchBarStateEditing,textField.text);
+            } else {
+                self.searchStateBlock(TXSearchBarStateNormal,textField.text);
+            }
+        }
+    }
+    self.lastText = textField.text;
+}
 
 
 #pragma mark - Getter/Setter
@@ -99,8 +145,10 @@
     if (!_searchField) {
         _searchField = [[UITextField alloc] initWithFrame:CGRectZero];
         _searchField.delegate = self;
+        [_searchField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
         _searchField.borderStyle = UITextBorderStyleNone;
         _searchField.clearButtonMode = UITextFieldViewModeAlways;
+        _searchField.returnKeyType = UIReturnKeySearch;
     }
     return _searchField;
 }
