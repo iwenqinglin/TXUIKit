@@ -73,28 +73,33 @@
     return YES;
 }
 
+//下面代码不能打开，否则搜索状态会乱
+//有了textFieldDidChange这个方法就没必要打开下面的代码
+#if 0
 //ios 9
-//- (void)textFieldDidEndEditing:(UITextField *)textField {
-//    //NSLog(@"textFieldDidEndEditing");
-//    if (self.searchStateBlock) {
-//        if (textField.text.length > 0) {
-//            self.searchStateBlock(TXSearchBarStateEditing,textField.text);
-//        } else {
-//            self.searchStateBlock(TXSearchBarStateNormal,textField.text);
-//        }
-//    }
-//}
-////ios 10
-//- (void)textFieldDidEndEditing:(UITextField *)textField reason:(UITextFieldDidEndEditingReason)reason {
-//    //NSLog(@"textFieldDidEndEditing textField reason");
-//    if (self.searchStateBlock) {
-//        if (textField.text.length > 0) {
-//            self.searchStateBlock(TXSearchBarStateEditing,textField.text);
-//        } else {
-//            self.searchStateBlock(TXSearchBarStateNormal,textField.text);
-//        }
-//    }
-//}
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    //NSLog(@"textFieldDidEndEditing");
+    if (self.searchStateBlock) {
+        if (textField.text.length > 0) {
+            self.searchStateBlock(TXSearchBarStateSearching,textField.text);
+        } else {
+            self.searchStateBlock(TXSearchBarStateHistory,textField.text);
+        }
+    }
+}
+//ios 10
+- (void)textFieldDidEndEditing:(UITextField *)textField reason:(UITextFieldDidEndEditingReason)reason {
+    //NSLog(@"textFieldDidEndEditing textField reason");
+    if (self.searchStateBlock) {
+        if (textField.text.length > 0) {
+            self.searchStateBlock(TXSearchBarStateSearching,textField.text);
+        } else {
+            self.searchStateBlock(TXSearchBarStateHistory,textField.text);
+        }
+    }
+}
+#endif
+
 
 //限制字数、限制特定字符的实现
 //string新输入的字符
