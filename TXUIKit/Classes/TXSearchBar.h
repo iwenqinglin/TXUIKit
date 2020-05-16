@@ -38,6 +38,7 @@ typedef void(^ClickSearchButtonBlock)(NSString *searchText);
 
 
 
-@property(nonatomic, strong) NSString *placeholder;
+@property(nonatomic, copy) NSString *placeholder;
+@property(nonatomic, copy) NSString *searchText;
 
 @end

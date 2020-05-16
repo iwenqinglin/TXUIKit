@@ -119,9 +119,13 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     //NSLog(@"textFieldShouldReturn");
     if (textField.text.length > 0) {
-        self.searchStateBlock(TXSearchBarStateSearchResult,textField.text);
+        if (self.searchStateBlock) {
+            self.searchStateBlock(TXSearchBarStateSearchResult,textField.text);
+        }
     } else {
-        self.searchStateBlock(TXSearchBarStateHistory,textField.text);
+        if (self.searchStateBlock) {
+            self.searchStateBlock(TXSearchBarStateHistory,textField.text);
+        }
     }
     if (self.searchClickBlock) {
         self.searchClickBlock(textField.text);
@@ -162,6 +166,13 @@
     if (_placeholder != placeholder) {
         _placeholder = placeholder;
         self.searchField.placeholder = placeholder;
+    }
+}
+
+- (void)setSearchText:(NSString *)searchText {
+    if (_searchText != searchText) {
+        _searchText = searchText;
+        self.searchField.text = searchText;
     }
 }
 
