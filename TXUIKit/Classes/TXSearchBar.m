@@ -61,9 +61,9 @@
     //NSLog(@"textFieldDidBeginEditing");
     if (self.searchStateBlock) {
         if (textField.text.length > 0) {
-            self.searchStateBlock(TXSearchBarStateEditing,textField.text);
+            self.searchStateBlock(TXSearchBarStateSearching,textField.text);
         } else {
-            self.searchStateBlock(TXSearchBarStateNormal,textField.text);
+            self.searchStateBlock(TXSearchBarStateHistory,textField.text);
         }
     }
 }
@@ -106,7 +106,7 @@
 - (BOOL)textFieldShouldClear:(UITextField *)textField {
     //NSLog(@"textFieldShouldClear");
     if (self.searchStateBlock) {
-        self.searchStateBlock(TXSearchBarStateNormal,textField.text);
+        self.searchStateBlock(TXSearchBarStateHistory,textField.text);
     }
     return YES;
 }
@@ -114,9 +114,9 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     //NSLog(@"textFieldShouldReturn");
     if (textField.text.length > 0) {
-        self.searchStateBlock(TXSearchBarStateEnd,textField.text);
+        self.searchStateBlock(TXSearchBarStateSearchResult,textField.text);
     } else {
-        self.searchStateBlock(TXSearchBarStateNormal,textField.text);
+        self.searchStateBlock(TXSearchBarStateHistory,textField.text);
     }
     if (self.searchClickBlock) {
         self.searchClickBlock(textField.text);
@@ -130,9 +130,9 @@
     if (![self.lastText isEqualToString:textField.text]) {
         if (self.searchStateBlock) {
             if (textField.text.length > 0) {
-                self.searchStateBlock(TXSearchBarStateEditing,textField.text);
+                self.searchStateBlock(TXSearchBarStateSearching,textField.text);
             } else {
-                self.searchStateBlock(TXSearchBarStateNormal,textField.text);
+                self.searchStateBlock(TXSearchBarStateHistory,textField.text);
             }
         }
     }

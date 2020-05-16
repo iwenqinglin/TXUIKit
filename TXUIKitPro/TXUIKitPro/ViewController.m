@@ -35,11 +35,11 @@
     __weak typeof(self) weakSelf = self;
     [self.searchBar addEventBlock:^(TXSearchBarState state, NSString *searchText) {
         NSLog(@"state :%ld   string:%@",state,searchText);
-        if (state == TXSearchBarStateNormal) {
+        if (state == TXSearchBarStateHistory) {
             weakSelf.label.text = @"历史记录";
-        } else if (state == TXSearchBarStateEditing) {
+        } else if (state == TXSearchBarStateSearching) {
             weakSelf.label.text = @"正在搜索页面";
-        } else if (state == TXSearchBarStateEnd) {
+        } else if (state == TXSearchBarStateSearchResult) {
             weakSelf.label.text = @"搜索结果页面";
         }
         
