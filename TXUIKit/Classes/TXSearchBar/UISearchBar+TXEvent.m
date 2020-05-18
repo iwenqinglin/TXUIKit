@@ -11,11 +11,11 @@
 
 @end
 
-SearchStateChangeBlock g_searchStateBlock;
-SearchButtonClickedBlock g_searchClickBlock;
-CancelButtonClickedBlock g_cancelBlock;
+static SearchStateChangeBlock g_searchStateBlock;
+static SearchButtonClickedBlock g_searchClickBlock;
+static CancelButtonClickedBlock g_cancelBlock;
 
-NSString *g_lastText;//最后一次变更的文本
+static NSString *g_lastText;//最后一次变更的文本
 
 @implementation UISearchBar(TXEvent)
 
