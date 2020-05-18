@@ -12,7 +12,6 @@
 		40DB60E3246EEBBB0048A805 /* TXUIKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 40DB60E2246EEBBB0048A805 /* TXUIKit.podspec */; };
 		40EF04072472EDD300D248B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40EF04042472EDD300D248B7 /* Assets.xcassets */; };
 		40EF04082472EDD300D248B7 /* MainItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40EF04062472EDD300D248B7 /* MainItems.plist */; };
-		40EF040C2472EDE400D248B7 /* TXSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 40EF040B2472EDE400D248B7 /* TXSearchBar.m */; };
 		40EF04112472F2B300D248B7 /* UISearchBar+TXEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 40EF04102472F2B300D248B7 /* UISearchBar+TXEvent.m */; };
 		40EF04162473053800D248B7 /* UITextField+TXSearchEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 40EF04152473053800D248B7 /* UITextField+TXSearchEvent.m */; };
 		E903CBD324722B900094A53F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E903CBD224722B900094A53F /* AppDelegate.m */; };
@@ -29,8 +28,6 @@
 		40DB60E2246EEBBB0048A805 /* TXUIKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TXUIKit.podspec; path = ../TXUIKit.podspec; sourceTree = "<group>"; };
 		40EF04042472EDD300D248B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40EF04062472EDD300D248B7 /* MainItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MainItems.plist; sourceTree = "<group>"; };
-		40EF040A2472EDE400D248B7 /* TXSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXSearchBar.h; sourceTree = "<group>"; };
-		40EF040B2472EDE400D248B7 /* TXSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXSearchBar.m; sourceTree = "<group>"; };
 		40EF040E2472EE5E00D248B7 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		40EF040F2472F2B300D248B7 /* UISearchBar+TXEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+TXEvent.h"; sourceTree = "<group>"; };
 		40EF04102472F2B300D248B7 /* UISearchBar+TXEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+TXEvent.m"; sourceTree = "<group>"; };
@@ -147,8 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				40EF04132472F3A800D248B7 /* TXSearchBarDefines.h */,
-				40EF040A2472EDE400D248B7 /* TXSearchBar.h */,
-				40EF040B2472EDE400D248B7 /* TXSearchBar.m */,
 				40EF04142473053800D248B7 /* UITextField+TXSearchEvent.h */,
 				40EF04152473053800D248B7 /* UITextField+TXSearchEvent.m */,
 				40EF040F2472F2B300D248B7 /* UISearchBar+TXEvent.h */,
@@ -326,7 +321,6 @@
 				40EF04112472F2B300D248B7 /* UISearchBar+TXEvent.m in Sources */,
 				40EF04162473053800D248B7 /* UITextField+TXSearchEvent.m in Sources */,
 				E903CBD324722B900094A53F /* AppDelegate.m in Sources */,
-				40EF040C2472EDE400D248B7 /* TXSearchBar.m in Sources */,
 				40DB60C4246EE9230048A805 /* main.m in Sources */,
 				E903CBDA24722C9D0094A53F /* MainPageVC.m in Sources */,
 				E903CBE124722E8B0094A53F /* SearchBarVC.m in Sources */,

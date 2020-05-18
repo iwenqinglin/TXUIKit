@@ -24,6 +24,7 @@ static NSString *g_lastText;//最后一次变更的文本
     g_searchStateBlock = stateBlock;
     g_searchClickBlock = searchClickBlock;
     self.delegate = self;
+    [self addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
 }
 
 #pragma mark - UITextFieldDelegate
