@@ -9,24 +9,19 @@
 #import "MainPageVC.h"
 #import "SearchBarVC.h"
 
+
 @interface MainPageVC ()
 
 @property (nonatomic, strong) NSArray *sourceArrays;
 
 @end
 
-@implementation MainPageVC
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    //self.navigationController.navigationBar.hidden = YES;
-}
+@implementation MainPageVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Main";
-    
-    self.sourceArrays = @[@"searchBar"];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"maincell"];
 }
@@ -48,44 +43,20 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    SearchBarVC *searchVC = [[SearchBarVC alloc] init];
-    [self.navigationController pushViewController:searchVC animated:YES];
+    NSString *className = [self.sourceArrays objectAtIndex:indexPath.row];
+    UIViewController *vc = [[NSClassFromString(className) alloc] init];
+    vc.title = className;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (NSArray *)sourceArrays {
+    if (!_sourceArrays) {
+        NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"MainItems" ofType:@"plist"];
+        _sourceArrays = [NSArray arrayWithContentsOfFile:plistPath];
+    }
+    return _sourceArrays;
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

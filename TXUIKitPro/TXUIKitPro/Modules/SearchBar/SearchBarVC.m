@@ -8,6 +8,7 @@
 
 #import "SearchBarVC.h"
 
+
 @interface SearchBarVC ()
 
 @end
@@ -17,7 +18,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"SearchBar";
     self.view.backgroundColor = [UIColor whiteColor];
 }
 
