@@ -21,7 +21,7 @@
     CGRect rect = [UIScreen mainScreen].bounds;
     self.window = [[UIWindow alloc] initWithFrame:rect];
     
-    MainPageVC *vc = [[MainPageVC alloc] initWithStyle:UITableViewStylePlain];
+    MainPageVC *vc = [[MainPageVC alloc] initWithStyle:UITableViewStyleGrouped];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
