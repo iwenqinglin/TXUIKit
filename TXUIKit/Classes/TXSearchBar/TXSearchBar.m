@@ -11,7 +11,7 @@
 @interface TXSearchBar ()<UITextFieldDelegate>
 @property(nonatomic, strong) UITextField *searchField;
 @property(nonatomic, copy) SearchStateChangeBlock searchStateBlock;
-@property(nonatomic, copy) ClickSearchButtonBlock searchClickBlock;
+@property(nonatomic, copy) SearchButtonClickedBlock searchClickBlock;
 @property(nonatomic, copy) NSString *lastText;//最后一次变更的文本
 
 @end
@@ -30,7 +30,7 @@
     return self;
 }
 
-- (void)addEventBlock:(SearchStateChangeBlock)stateBlock clickBlock:(ClickSearchButtonBlock)clickBlock {
+- (void)addEventBlock:(SearchStateChangeBlock)stateBlock clickBlock:(SearchButtonClickedBlock)clickBlock {
     self.searchStateBlock = stateBlock;
     self.searchClickBlock = clickBlock;
 }
@@ -58,12 +58,12 @@
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
     //becomeFirstResponder方法先去调用textFieldShouldBeginEditing，如果为YES则调用此方法.
     //点击输入框的时候（尝试输入的时候）也会调用此方法。
-    //NSLog(@"textFieldDidBeginEditing");
+    NSString *searchText = textField.text;
     if (self.searchStateBlock) {
-        if (textField.text.length > 0) {
-            self.searchStateBlock(TXSearchBarStateSearching,textField.text);
+        if (searchText.length > 0) {
+            self.searchStateBlock(textField,searchText,TXSearchBarStateSearching);
         } else {
-            self.searchStateBlock(TXSearchBarStateHistory,textField.text);
+            self.searchStateBlock(textField,searchText,TXSearchBarStateHistory);
         }
     }
 }
@@ -109,26 +109,25 @@
 }
 
 - (BOOL)textFieldShouldClear:(UITextField *)textField {
-    //NSLog(@"textFieldShouldClear");
+    NSString *searchText = textField.text;
     if (self.searchStateBlock) {
-        self.searchStateBlock(TXSearchBarStateHistory,textField.text);
+        self.searchStateBlock(textField,searchText,TXSearchBarStateHistory);
     }
     return YES;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    //NSLog(@"textFieldShouldReturn");
-    if (textField.text.length > 0) {
-        if (self.searchStateBlock) {
-            self.searchStateBlock(TXSearchBarStateSearchResult,textField.text);
-        }
-    } else {
-        if (self.searchStateBlock) {
-            self.searchStateBlock(TXSearchBarStateHistory,textField.text);
+    NSString *searchText = textField.text;
+    if (self.searchStateBlock) {
+        if (searchText.length > 0) {
+            self.searchStateBlock(textField,searchText,TXSearchBarStateSearchResult);
+        } else {
+            self.searchStateBlock(textField,searchText,TXSearchBarStateHistory);
         }
     }
+
     if (self.searchClickBlock) {
-        self.searchClickBlock(textField.text);
+        self.searchClickBlock(textField,searchText);
     }
     [self.searchField resignFirstResponder];
     return YES;
@@ -136,16 +135,17 @@
 
 #pragma mark - Target
 -(void)textFieldDidChange:(UITextField *)textField {
+    NSString *searchText = textField.text;
     if (![self.lastText isEqualToString:textField.text]) {
         if (self.searchStateBlock) {
-            if (textField.text.length > 0) {
-                self.searchStateBlock(TXSearchBarStateSearching,textField.text);
+            if (searchText.length > 0) {
+                self.searchStateBlock(textField,searchText,TXSearchBarStateSearching);
             } else {
-                self.searchStateBlock(TXSearchBarStateHistory,textField.text);
+                self.searchStateBlock(textField,searchText,TXSearchBarStateHistory);
             }
         }
     }
-    self.lastText = textField.text;
+    self.lastText = searchText;
 }
 
 
