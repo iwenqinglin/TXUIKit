@@ -9,32 +9,33 @@
 /* Begin PBXBuildFile section */
 		29F3C8D888C75442715D1931 /* libPods-TXUIKitPro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 284D9AD381928C6AE8C73020 /* libPods-TXUIKitPro.a */; };
 		40DB60C4246EE9230048A805 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DB60C3246EE9230048A805 /* main.m */; };
-		40DB60C7246EE9230048A805 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DB60C6246EE9230048A805 /* AppDelegate.m */; };
-		40DB60CA246EE9230048A805 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DB60C9246EE9230048A805 /* ViewController.m */; };
-		40DB60CD246EE9230048A805 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40DB60CB246EE9230048A805 /* Main.storyboard */; };
-		40DB60CF246EE9230048A805 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40DB60CE246EE9230048A805 /* Assets.xcassets */; };
-		40DB60D2246EE9230048A805 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40DB60D0246EE9230048A805 /* LaunchScreen.storyboard */; };
 		40DB60E3246EEBBB0048A805 /* TXUIKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 40DB60E2246EEBBB0048A805 /* TXUIKit.podspec */; };
 		40DB60E6246EEC5B0048A805 /* TXSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DB60E5246EEC5B0048A805 /* TXSearchBar.m */; };
+		E903CBD324722B900094A53F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E903CBD224722B900094A53F /* AppDelegate.m */; };
+		E903CBD524722BCF0094A53F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E903CBD424722BCF0094A53F /* Assets.xcassets */; };
+		E903CBDA24722C9D0094A53F /* MainPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E903CBD924722C9D0094A53F /* MainPageVC.m */; };
+		E903CBDE24722DDC0094A53F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E903CBDD24722DDC0094A53F /* LaunchScreen.storyboard */; };
+		E903CBE124722E8B0094A53F /* SearchBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E903CBE024722E8B0094A53F /* SearchBarVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		284D9AD381928C6AE8C73020 /* libPods-TXUIKitPro.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TXUIKitPro.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40DB60BF246EE9230048A805 /* TXUIKitPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TXUIKitPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40DB60C3246EE9230048A805 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		40DB60C5246EE9230048A805 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		40DB60C6246EE9230048A805 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		40DB60C8246EE9230048A805 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		40DB60C9246EE9230048A805 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		40DB60CC246EE9230048A805 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		40DB60CE246EE9230048A805 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		40DB60D1246EE9230048A805 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40DB60D3246EE9230048A805 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40DB60E2246EEBBB0048A805 /* TXUIKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TXUIKit.podspec; path = ../TXUIKit.podspec; sourceTree = "<group>"; };
 		40DB60E4246EEC5B0048A805 /* TXSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXSearchBar.h; sourceTree = "<group>"; };
 		40DB60E5246EEC5B0048A805 /* TXSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXSearchBar.m; sourceTree = "<group>"; };
 		693005CA5866DD5EF57CE475 /* Pods-TXUIKitPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TXUIKitPro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TXUIKitPro/Pods-TXUIKitPro.debug.xcconfig"; sourceTree = "<group>"; };
 		E3FC994A411B8AAFDCDF2504 /* Pods-TXUIKitPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TXUIKitPro.release.xcconfig"; path = "Pods/Target Support Files/Pods-TXUIKitPro/Pods-TXUIKitPro.release.xcconfig"; sourceTree = "<group>"; };
+		E903CBD124722B900094A53F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E903CBD224722B900094A53F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E903CBD424722BCF0094A53F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E903CBD824722C9D0094A53F /* MainPageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainPageVC.h; sourceTree = "<group>"; };
+		E903CBD924722C9D0094A53F /* MainPageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainPageVC.m; sourceTree = "<group>"; };
+		E903CBDD24722DDC0094A53F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E903CBDF24722E8B0094A53F /* SearchBarVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchBarVC.h; sourceTree = "<group>"; };
+		E903CBE024722E8B0094A53F /* SearchBarVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchBarVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,15 +72,12 @@
 			isa = PBXGroup;
 			children = (
 				40DB60D9246EE9650048A805 /* TXUIKit */,
-				40DB60C5246EE9230048A805 /* AppDelegate.h */,
-				40DB60C6246EE9230048A805 /* AppDelegate.m */,
-				40DB60C8246EE9230048A805 /* ViewController.h */,
-				40DB60C9246EE9230048A805 /* ViewController.m */,
-				40DB60CB246EE9230048A805 /* Main.storyboard */,
-				40DB60CE246EE9230048A805 /* Assets.xcassets */,
-				40DB60D0246EE9230048A805 /* LaunchScreen.storyboard */,
+				E903CBD024722B900094A53F /* AppDelegate */,
+				E903CBCF24722B4F0094A53F /* Modules */,
+				E903CBCE24722B4F0094A53F /* Resources */,
 				40DB60D3246EE9230048A805 /* Info.plist */,
 				40DB60C2246EE9230048A805 /* Supporting Files */,
+				E903CBDD24722DDC0094A53F /* LaunchScreen.storyboard */,
 			);
 			path = TXUIKitPro;
 			sourceTree = "<group>";
@@ -134,6 +132,50 @@
 				284D9AD381928C6AE8C73020 /* libPods-TXUIKitPro.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E903CBCE24722B4F0094A53F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E903CBD424722BCF0094A53F /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E903CBCF24722B4F0094A53F /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				E903CBD624722C420094A53F /* Main */,
+				E903CBD724722C420094A53F /* SearchBar */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		E903CBD024722B900094A53F /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				E903CBD124722B900094A53F /* AppDelegate.h */,
+				E903CBD224722B900094A53F /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		E903CBD624722C420094A53F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E903CBD824722C9D0094A53F /* MainPageVC.h */,
+				E903CBD924722C9D0094A53F /* MainPageVC.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		E903CBD724722C420094A53F /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				E903CBDF24722E8B0094A53F /* SearchBarVC.h */,
+				E903CBE024722E8B0094A53F /* SearchBarVC.m */,
+			);
+			path = SearchBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,10 +239,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40DB60D2246EE9230048A805 /* LaunchScreen.storyboard in Resources */,
+				E903CBDE24722DDC0094A53F /* LaunchScreen.storyboard in Resources */,
+				E903CBD524722BCF0094A53F /* Assets.xcassets in Resources */,
 				40DB60E3246EEBBB0048A805 /* TXUIKit.podspec in Resources */,
-				40DB60CF246EE9230048A805 /* Assets.xcassets in Resources */,
-				40DB60CD246EE9230048A805 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,33 +277,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40DB60CA246EE9230048A805 /* ViewController.m in Sources */,
-				40DB60C7246EE9230048A805 /* AppDelegate.m in Sources */,
+				E903CBD324722B900094A53F /* AppDelegate.m in Sources */,
 				40DB60C4246EE9230048A805 /* main.m in Sources */,
+				E903CBDA24722C9D0094A53F /* MainPageVC.m in Sources */,
+				E903CBE124722E8B0094A53F /* SearchBarVC.m in Sources */,
 				40DB60E6246EEC5B0048A805 /* TXSearchBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		40DB60CB246EE9230048A805 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				40DB60CC246EE9230048A805 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		40DB60D0246EE9230048A805 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				40DB60D1246EE9230048A805 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		40DB60D4246EE9230048A805 /* Debug */ = {
