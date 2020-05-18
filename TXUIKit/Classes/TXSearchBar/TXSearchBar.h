@@ -30,6 +30,7 @@ typedef void(^ClickSearchButtonBlock)(NSString *searchText);
 //TXSearchBar class
 @interface TXSearchBar : UIView
 
++ (instancetype)searchBarWithCustomView:(UIView *)view;
 - (instancetype)initWithFrame:(CGRect)frame;
 //添加搜索状态block、添加搜索点击事件block
 - (void)addEventBlock:(SearchStateChangeBlock)stateBlock clickBlock:(ClickSearchButtonBlock)clickBlock;

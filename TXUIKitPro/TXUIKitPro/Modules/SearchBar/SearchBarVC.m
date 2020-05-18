@@ -8,7 +8,6 @@
 
 #import "SearchBarVC.h"
 
-
 @interface SearchBarVC ()
 
 @end
@@ -25,7 +24,6 @@
     [[UIBarButtonItem appearanceWhenContainedInInstancesOfClasses:@[[UISearchBar class]]] setTitle:@"取消"];
     searchBar.tintColor = [UIColor colorWithRed:86/255.0 green:179/255.0 blue:11/255.0 alpha:1];
     [self.view addSubview:searchBar];
-    
     [searchBar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view).offset(10);
         make.right.equalTo(self.view).offset(-10);
